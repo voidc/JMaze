@@ -120,22 +120,5 @@ public class Maze {
 		}
 		return airCells;
 	}
-	
-	public static void main(String[] args) {
-		MazeGenerator gen = new MazeGenerator();
-		while (true) {
-			Maze maze = gen.generate(101, 101);
-			File f = new File(
-					"C:\\Users\\Dominik\\Java Stuff\\Project Maze\\gen.png");
-			if (f.exists())
-				f.delete();
-			MazeIO.saveMazeAsImage(maze, f);
-			try {
-				Thread.sleep(3*1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-	}
 
 }
